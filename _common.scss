@@ -1,0 +1,393 @@
+$heading-font: "Monument Extended", sans-serif;
+$secondary-font: "Red Rose", cursive;
+$blue-background-color: #52ffe0;
+$black-background-color: #101010;
+$gray-background-color: #2c2d31;
+$white-background-color: #f8f8f8;
+$gray-dop-background-color:#1d1e22;
+$dop-color:#818698;
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url(./fonts/MonumentExtended.otf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy.otf) format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font-family: $heading-font;
+}
+
+button {
+  border: none;
+  font-family: $secondary-font;
+}
+
+.btn {
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  color: $gray-background-color;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  font-family: $secondary-font;
+
+  &.blue {
+    background-color: $blue-background-color;
+  }
+
+  &.connect-value {
+    padding: 15px 28px 15px 29px;
+    flex-shrink: 0;
+  }
+
+  &.gray {
+    background-color: $gray-background-color;
+    color: $white-background-color;
+  }
+
+  &.explore {
+    padding: 21px 40px 22px 39px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+  }
+}
+
+body {
+  background-color: $black-background-color;
+  color: #f8f8f8;
+  font-family: $secondary-font;
+  max-width: 1920px;
+  min-width: 1920px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    display: flex;
+    width: 100%;
+    padding: 37px 150px 0 150px;
+    justify-content: space-between;
+    margin-bottom: 72.22px;
+  }
+
+  nav {
+    align-items: center;
+    gap: 40px;
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .nav-link {
+    letter-spacing: 0.36px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white-background-color;
+  font-size: 18px;
+}
+
+.qeeb {
+  font-family: Gilroy, sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.72px;
+}
+
+.svg-qeeb {
+  display: flex;
+  align-items: center;
+  gap: 8.22px;
+  flex-shrink: 0;
+}
+
+.main-header {
+  width: 100%;
+  padding: 0 150px 0 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    text-align: start;
+    font-size: 36px;
+    letter-spacing: 1.44px;
+
+    &.collect {
+      font-size: 72px;
+      letter-spacing: 2.88px;
+      text-transform: uppercase;
+      margin: 16px 0 64px 0;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: end;
+    padding-left: 85px;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    img {
+      width: 775px;
+      height: 758px;
+      border-radius: 180px;
+    }
+
+    .circle-play {
+      animation: rotate 6s linear infinite;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      fill: rgba(129, 134, 152, 0.2);
+      backdrop-filter: blur(25px);
+      margin-left: -85px;
+    }
+
+    .play {
+      margin-bottom: 85px;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .explore-circles {
+    align-items: flex-start;
+    display: flex;
+    gap: 54px;
+
+    svg {
+      margin: 5px 0 0 -45px;
+    }
+  }
+
+  .circles {
+    display: flex;
+  }
+
+  .circle {
+    width: 50px;
+    border-radius: 50px;
+  }
+
+  .circle + .circle {
+    margin-left: -16px;
+  }
+
+  .block-count-topic {
+    margin-top: 11.19px;
+    display: flex;
+    gap: 116px;
+
+    .count-topic {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .count {
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 0.6px;
+      padding-left: 0;
+    }
+
+    .topic {
+      text-align: center;
+      color: $dop-color;
+      font-size: 16px;
+      letter-spacing: 0.32px;
+    }
+  }
+}
+
+.container-sec {
+  width: 100%;
+  padding: 0 115px 120px 115px;
+  margin-top: 100px;
+
+  .categorie {
+    display: flex;
+    flex-direction: column;
+    background-color: $gray-background-color;
+    padding: 10px 10px 0px 10px;
+    border-radius: 50px;
+    height: 367px;
+
+    img {
+      border-radius: 50px;
+      width: 225px;
+      height: 225px;
+    }
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.96px;
+      align-items: center;
+      margin: auto 0;
+      text-align: center;
+    }
+  }
+}
+
+.circle-arrow {
+  position: absolute;
+  height: 70px;
+  border-radius: 50%;
+  background-color: $gray-background-color;
+  padding: 20px 20px;
+  margin-top: 139px;
+  transition: background-color 0.3s ease;
+
+  &.left {
+    margin-left: -45px;
+  }
+
+  &.right {
+    margin-left: 200px;
+  }
+}
+
+.circle-arrow:hover {
+  background-color: $blue-background-color;
+}
+
+.categories {
+  margin-top: 72px;
+  display: flex;
+  gap: 30px;
+  padding: 0 35px;
+}
+
+.h1-group {
+  display: flex;
+  font-size: 30px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+header {
+  .h1-group {
+    margin-left: 35px;
+  }
+}
+
+section {
+  width: 100%;
+
+  &.gray {
+    background-color: $gray-dop-background-color;
+  }
+}
+
+footer {
+  padding: 48px 239px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  background-color: $gray-dop-background-color;
+
+  .qeeb-block {
+    display: flex;
+    gap: 152px;
+  }
+
+  .links-blocks {
+    display: flex;
+    gap: 32px;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    h1 {
+      font-size: 18px;
+      line-height: 18px;
+      width: 231.5px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .mail-block {
+    display: flex;
+    background-color: $blue-background-color;
+    border-radius: 30px;
+    gap: 15px;
+    padding: 80px 48px;
+    flex-direction: column;
+    color: $gray-dop-background-color;
+
+    h1 {
+      font-size: 24px;
+      letter-spacing: 0.96px;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    .mail {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+    }
+  }
+
+  .titles {
+    display: flex;
+    justify-content: space-between;
+    gap: 345px;
+
+    span {
+      color:#DFE5F5;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .icons{
+      display: flex;
+      gap: 24px;
+    }
+  }
+}
