@@ -133,10 +133,26 @@ a {
     transform: rotate(360deg);
   }
 }
+.main-header .right .img-gradient {
+  position: relative;
+}
+.main-header .right .gradient {
+  border-radius: 180px;
+  background: linear-gradient(180deg, #7f1cfc 0%, #59dcdc 100%);
+  filter: blur(50px);
+  position: absolute;
+  width: 735px;
+  height: 719px;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
 .main-header .right img {
+  position: relative;
   width: 775px;
   height: 758px;
   border-radius: 180px;
+  z-index: 2;
 }
 .main-header .right .circle-play {
   animation: rotate 6s linear infinite;
@@ -148,12 +164,14 @@ a {
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
   margin-left: -85px;
+  z-index: 3;
 }
 .main-header .right .play {
   margin-bottom: 85px;
   position: absolute;
   width: 30px;
   height: 30px;
+  z-index: 4;
 }
 .main-header .explore-circles {
   align-items: flex-start;
@@ -309,6 +327,7 @@ footer .mail-block {
   padding: 80px 48px;
   flex-direction: column;
   color: #1d1e22;
+  position: relative;
 }
 footer .mail-block h1 {
   font-size: 24px;
@@ -323,13 +342,18 @@ footer .mail-block .mail {
   gap: 16px;
   justify-content: space-between;
 }
+footer .mail-block .points {
+  position: absolute;
+  bottom: -27px;
+  right: -20.5px;
+}
 footer .titles {
   display: flex;
   justify-content: space-between;
   gap: 345px;
 }
 footer .titles span {
-  color: #DFE5F5;
+  color: #dfe5f5;
   font-size: 16px;
   line-height: 30px;
 }
@@ -364,7 +388,7 @@ footer .titles .icons {
   letter-spacing: 0.64px;
 }
 .block-days .block.left {
-  background-color: rgb(29, 30, 34);
+  background-color: #1d1e22;
   border-radius: 20px;
 }
 
@@ -382,10 +406,25 @@ footer .titles .icons {
   align-items: center;
   gap: 24px;
 }
+.grid-collections .collection .img-circle {
+  position: relative;
+}
+.grid-collections .collection .top-circle {
+  background-color: #52ffe0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -8px;
+}
 .grid-collections .collection img {
   border-radius: 30px;
   width: 100px;
-  height: 100px;
 }
 .grid-collections .collection .name-amount {
   display: flex;
@@ -604,5 +643,5 @@ footer .titles .icons {
 }
 .app .android {
   background-color: #52ffe0;
-  color: #1D1E22;
+  color: #1d1e22;
 }/*# sourceMappingURL=main.css.map */

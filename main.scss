@@ -47,6 +47,24 @@
     align-items: center;
     gap: 24px;
 
+    .img-circle{
+      position: relative;
+    }
+
+    .top-circle{
+      background-color: $blue-background-color;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      position: absolute;
+      font-size: 16px;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: -8px;
+    }
+
     img {
       border-radius: 30px;
       width: 100px;
@@ -304,6 +322,6 @@
   
   .android{
     background-color: $blue-background-color;
-    color: $gray-dop-background-color22;
+    color: $gray-dop-background-color;
   }
 }
